@@ -1,9 +1,3 @@
-/**
- * Copyright Tora Holdings Limited 2007 - 2008. All rights reserved. 
- * This software is the confidential and proprietary information of Tora Holdings Limited. 
- * Your rights, if any, with respect to the software are governed by your license agreement with Tora.  
- */
-
 import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
