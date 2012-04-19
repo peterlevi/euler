@@ -6,9 +6,7 @@ isPrime :: Integer -> Bool
 isPrime x = null $ filter (\y ->  x `mod` y == 0) $ takeWhile (\y ->  y*y <= x) [2..]
 
 bad :: Integer -> Bool
-bad x
-  | isPrime x = False
-  | otherwise = null [p | p <- takeWhile (<x) primes, is2sq (x - p)]
+bad x = (not $ isPrime x) && null [p | p <- takeWhile (<x) primes, is2sq (x - p)]
 
 isInt :: Double -> Bool
 isInt x = x == fromInteger (round x)
