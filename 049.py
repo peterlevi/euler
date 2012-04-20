@@ -21,6 +21,6 @@ for k, v in f.items():
         for a in v:
             for b in v:
                 for c in v:
-                    if b - a == c - b == 3330:
+                    if a < b and b - a == c - b:
                         print(a, b, c)
 
