@@ -16,7 +16,7 @@ primes = 2 : gaps 3 (join [[p*p,p*p+2*p..] | p <- primes'])
     gaps k xs@(x:t) | k==x  = gaps (k+2) t 
                     | True  = k : gaps (k+2) xs
 
-isPrime x = null $ [p | p <- takeWhile (\p -> p*p <= x) primes, x `mod` p == 0]
+isPrime x = x /= 1 && (null $ [p | p <- takeWhile (\p -> p*p <= x) primes, x `mod` p == 0])
 
 factors x = unfoldr findFactor x
    where
